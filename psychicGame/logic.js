@@ -57,15 +57,15 @@ document.onkeyup = function(event) {
             if (userGuess == letterToGuess){
                 wins++;
                 document.querySelector('#wins').innerHTML = "Wins: " + wins;
-                alert("Yes, you are psychic!");
+                alert("Congratulations");
                 reset();
             }
         }else if(guessesLeft == 0){
-            // Then we will loss and we'll update the html to display the loss 
+            // Loss increment and push to html
             losses++;
             document.querySelector('#losses').innerHTML = "Losses: " + losses;
-            alert("Sorry, you're not psychic, maybe try again?");
-            // Then we'll call the reset. 
+            alert("Try Again");
+            // Reset 
             reset();
         }
 };
